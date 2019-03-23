@@ -12,4 +12,15 @@ public interface ApiService {
             @Query("country") String country,
             @Query("apiKey") String apiKey
     );
+
+    @GET("everything")
+    Call<ResponseItem> getNewsSearch(
+            @Query("q") String keyword,
+            @Query("language") String languange,
+            @Query("sortBy") String sortBy,
+            @Query("apiKey") String apiKey
+
+    );
+
+
 }
